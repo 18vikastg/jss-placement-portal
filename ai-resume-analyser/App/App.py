@@ -17,6 +17,15 @@ import plotly.express as px # to create visualisations at the admin session
 import plotly.graph_objects as go
 from geopy.geocoders import Nominatim
 
+# PDF processing imports
+from pdfminer3.layout import LAParams, LTTextBox
+from pdfminer3.pdfpage import PDFPage
+from pdfminer3.pdfinterp import PDFResourceManager
+from pdfminer3.pdfinterp import PDFPageInterpreter
+from pdfminer3.converter import TextConverter
+from streamlit_tags import st_tags
+from PIL import Image
+
 # NLTK setup for Streamlit Cloud
 import nltk
 import ssl
@@ -308,13 +317,7 @@ def extract_companies_from_text(text):
             found_companies.append(company.title())
     
     return found_companies if found_companies else ['Previous work experience']
-from pdfminer3.layout import LAParams, LTTextBox
-from pdfminer3.pdfpage import PDFPage
-from pdfminer3.pdfinterp import PDFResourceManager
-from pdfminer3.pdfinterp import PDFPageInterpreter
-from pdfminer3.converter import TextConverter
-from streamlit_tags import st_tags
-from PIL import Image
+
 # pre stored data for prediction purposes
 from Courses import ds_course,web_course,android_course,ios_course,uiux_course,resume_videos,interview_videos
 try:
@@ -331,7 +334,15 @@ except ImportError as e:
     config = Config()
     print("⚠️ Using fallback configuration")
 
-nltk.download('stopwords')
+# Download NLTK data safely
+try:
+    import nltk
+    nltk.download('stopwords', quiet=True)
+    nltk.download('punkt', quiet=True)
+    nltk.download('averaged_perceptron_tagger', quiet=True)
+    nltk.download('wordnet', quiet=True)
+except Exception as e:
+    print(f"NLTK download warning: {e}")
 
 
 ###### Preprocessing functions ######

@@ -82,40 +82,53 @@ export const register = async (req, res) => {
 
 export const login = async (req, res) => {
     try {
+        console.log("🔐 Login attempt:", req.body);
         const { email, password, role } = req.body;
         
         if (!email || !password || !role) {
+            console.log("❌ Missing fields:", { email: !!email, password: !!password, role: !!role });
             return res.status(400).json({
                 message: "Something is missing",
                 success: false
             });
         };
+        
+        console.log("🔍 Looking for user with email:", email);
         let user = await User.findOne({ email });
         if (!user) {
+            console.log("❌ User not found with email:", email);
             return res.status(400).json({
                 message: "Incorrect email or password.",
                 success: false,
             })
         }
+        
+        console.log("✅ User found:", user.email, "Role:", user.role);
         const isPasswordMatch = await bcrypt.compare(password, user.password);
         if (!isPasswordMatch) {
+            console.log("❌ Password mismatch for user:", email);
             return res.status(400).json({
                 message: "Incorrect email or password.",
                 success: false,
             })
         };
+        
+        console.log("✅ Password matches");
         // check role is correct or not
         if (role !== user.role) {
+            console.log("❌ Role mismatch. Expected:", role, "Got:", user.role);
             return res.status(400).json({
                 message: "Account doesn't exist with current role.",
                 success: false
             })
         };
 
+        console.log("✅ Role matches. Generating token...");
         const tokenData = {
             userId: user._id
         }
         const token = await jwt.sign(tokenData, process.env.SECRET_KEY, { expiresIn: '1d' });
+        console.log("✅ Token generated successfully");
 
         user = {
             _id: user._id,
@@ -126,13 +139,18 @@ export const login = async (req, res) => {
             profile: user.profile
         }
 
+        console.log("✅ Login successful for:", user.email);
         return res.status(200).cookie("token", token, { maxAge: 1 * 24 * 60 * 60 * 1000, httpsOnly: true, sameSite: 'strict' }).json({
             message: `Welcome back ${user.fullname}`,
             user,
             success: true
         })
     } catch (error) {
-        console.log(error);
+        console.log("💥 Login error:", error);
+        return res.status(500).json({
+            message: "Internal server error",
+            success: false
+        });
     }
 }
 

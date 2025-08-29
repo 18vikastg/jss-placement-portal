@@ -26,7 +26,8 @@ import {
     Users,
     Lightbulb,
     Trophy,
-    Mic
+    Mic,
+    Brain
 } from 'lucide-react'
 import { Button } from '../ui/button'
 import { Badge } from '../ui/badge'
@@ -225,6 +226,22 @@ const StudentDashboardEnhanced = () => {
             color: "from-emerald-500 to-teal-500",
             link: "/student/mock-interview",
             stats: "AI-powered"
+        },
+        {
+            title: "AI Resume Analyzer",
+            description: "Get AI-powered resume insights",
+            icon: Brain,
+            color: "from-orange-500 to-red-500",
+            link: "/student/ai-resume-analyzer",
+            stats: "Smart analysis"
+        },
+        {
+            title: "AI Resume Analyzer",
+            description: "Get AI-powered resume insights",
+            icon: Brain,
+            color: "from-orange-500 to-red-500",
+            link: "/student/ai-resume-analyzer",
+            stats: "Smart analysis"
         }
     ]
 

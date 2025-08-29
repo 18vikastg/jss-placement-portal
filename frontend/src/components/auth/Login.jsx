@@ -107,6 +107,9 @@ const Login = () => {
         }
     }
     useEffect(()=>{
+        // Reset loading state on component mount to prevent stuck loading
+        dispatch(setLoading(false));
+        
         if(user){
             // Role-based redirection
             const userRole = user.role;
@@ -124,7 +127,7 @@ const Login = () => {
                     navigate("/");
             }
         }
-    },[user, navigate])
+    },[user, navigate, dispatch])
     return (
         <div>
             <Navbar />

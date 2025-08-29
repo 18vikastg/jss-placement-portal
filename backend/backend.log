@@ -1,0 +1,46 @@
+nohup: ignoring input
+Starting server on port 8001
+Server running at port 8001
+mongodb connected successfully
+🔐 Login attempt: {
+  email: 'patel@gmail.com',
+  password: 'patel@gmail.com',
+  role: 'student'
+}
+🔍 Looking for user with email: patel@gmail.com
+✅ User found: patel@gmail.com Role: student
+✅ Password matches
+✅ Role matches. Generating token...
+✅ Token generated successfully
+✅ Login successful for: patel@gmail.com
+Token received: Token exists
+Token length: 176
+Token first 20 chars: eyJhbGciOiJIUzI1NiIs...
+Authentication error: invalid signature
+Error type: JsonWebTokenError
+Token received: Token exists
+Token length: 176
+Token first 20 chars: eyJhbGciOiJIUzI1NiIs...
+Authentication error: invalid signature
+Error type: JsonWebTokenError
+Token received: Token exists
+Token length: 176
+Token first 20 chars: eyJhbGciOiJIUzI1NiIs...
+Authentication error: invalid signature
+Error type: JsonWebTokenError
+Token received: Token exists
+Token length: 176
+Token first 20 chars: eyJhbGciOiJIUzI1NiIs...
+Authentication error: invalid signature
+Error type: JsonWebTokenError
+🔐 Login attempt: {
+  email: 'vikastg2000@gmail.com',
+  password: '@Vikastg2004',
+  role: 'student'
+}
+🔍 Looking for user with email: vikastg2000@gmail.com
+✅ User found: vikastg2000@gmail.com Role: student
+✅ Password matches
+✅ Role matches. Generating token...
+✅ Token generated successfully
+✅ Login successful for: vikastg2000@gmail.com

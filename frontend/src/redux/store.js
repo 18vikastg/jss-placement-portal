@@ -19,10 +19,17 @@ const persistConfig = {
     key: 'root',
     version: 1,
     storage,
+    blacklist: ['auth'] // Don't persist auth state to avoid loading issues
+}
+
+const authPersistConfig = {
+    key: 'auth',
+    storage,
+    blacklist: ['loading'] // Don't persist loading state
 }
 
 const rootReducer = combineReducers({
-    auth:authSlice,
+    auth: persistReducer(authPersistConfig, authSlice),
     job:jobSlice,
     company:companySlice,
     application:applicationSlice

@@ -27,6 +27,7 @@ import PreparationHub from './components/PreparationHub'
 import PreparationHubEnhanced from './components/PreparationHubEnhanced'
 import PreparationDashboard from './components/PreparationDashboard'
 import PlacementDashboard from './components/PlacementDashboard'
+import AIResumeAnalyzer from './components/student/AIResumeAnalyzer'
 
 
 const appRouter = createBrowserRouter([
@@ -142,6 +143,10 @@ const appRouter = createBrowserRouter([
   {
     path:"/student/mock-interview",
     element:<ProtectedRoute allowedRoles={['student']}><MockInterviewPage/></ProtectedRoute> 
+  },
+  {
+    path:"/student/ai-resume-analyzer",
+    element:<ProtectedRoute allowedRoles={['student']}><AIResumeAnalyzer/></ProtectedRoute> 
   },
 
 ])

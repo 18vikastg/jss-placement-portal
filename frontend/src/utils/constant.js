@@ -10,6 +10,7 @@ export const RECRUITER_API_END_POINT=`${API_BASE_URL}/api/v1/recruiter`;
 export const FACULTY_AUTH_API_END_POINT=`${API_BASE_URL}/api/v1/auth/faculty`;
 export const RECRUITER_AUTH_API_END_POINT=`${API_BASE_URL}/api/v1/auth/recruiter`;
 export const PREPARATION_API_END_POINT=`${API_BASE_URL}/api/v1/preparation`;
+export const AI_RESUME_ANALYZER_API_END_POINT=`${API_BASE_URL}/api/v1/ai/resume-analyzer`;
 
 // Tech Roles Data
 export const TECH_ROLES = [

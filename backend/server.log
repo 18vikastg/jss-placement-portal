@@ -1,0 +1,34 @@
+nohup: ignoring input
+Starting server on port 8001
+Server running at port 8001
+mongodb connected successfully
+Token received: No token
+Token length: N/A
+Token first 20 chars: N/A
+Token received: No token
+Token length: N/A
+Token first 20 chars: N/A
+Token received: No token
+Token length: N/A
+Token first 20 chars: N/A
+Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/vikas/Desktop/jobportal-yt/backend/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/vikas/Desktop/jobportal-yt/backend/controllers/user.controller.js:118:33)
+Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/vikas/Desktop/jobportal-yt/backend/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/vikas/Desktop/jobportal-yt/backend/controllers/user.controller.js:118:33)
+Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/vikas/Desktop/jobportal-yt/backend/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/vikas/Desktop/jobportal-yt/backend/controllers/user.controller.js:118:33)
+Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/vikas/Desktop/jobportal-yt/backend/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/vikas/Desktop/jobportal-yt/backend/controllers/user.controller.js:118:33)
+Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/vikas/Desktop/jobportal-yt/backend/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/vikas/Desktop/jobportal-yt/backend/controllers/user.controller.js:118:33)
+Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/vikas/Desktop/jobportal-yt/backend/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/vikas/Desktop/jobportal-yt/backend/controllers/user.controller.js:118:33)
+Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/vikas/Desktop/jobportal-yt/backend/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/vikas/Desktop/jobportal-yt/backend/controllers/user.controller.js:118:33)
