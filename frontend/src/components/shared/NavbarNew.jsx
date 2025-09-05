@@ -6,7 +6,7 @@ import {
 } from "../ui/popover"
 import { Button } from "../ui/button"
 import { Avatar, AvatarImage } from "../ui/avatar"
-import { LogOut, User2, Home, Briefcase, Search, Building, TrendingUp, Menu, X, Users, BookOpen, Mic } from "lucide-react"
+import { LogOut, User2, Home, Briefcase, Search, Building, TrendingUp, Menu, X, Users, BookOpen, Mic, BarChart3 } from "lucide-react"
 import { Link, useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import axios from "axios"
@@ -111,6 +111,12 @@ const Navbar = () => {
                                         </Link>
                                     </li>
                                     <li>
+                                        <Link to="/placement/analytics" className='flex items-center gap-2 text-gray-700 hover:text-red-700 transition-colors px-3 py-2 rounded-lg hover:bg-red-50'>
+                                            <BarChart3 className='w-4 h-4' />
+                                            Analytics
+                                        </Link>
+                                    </li>
+                                    <li>
                                         <Link to="/browse" className='flex items-center gap-2 text-gray-700 hover:text-red-700 transition-colors px-3 py-2 rounded-lg hover:bg-red-50'>
                                             <Search className='w-4 h-4' />
                                             Browse
@@ -141,6 +147,12 @@ const Navbar = () => {
                                         <Link to="/browse" className='flex items-center gap-2 text-gray-700 hover:text-red-700 transition-colors px-3 py-2 rounded-lg hover:bg-red-50'>
                                             <Search className='w-4 h-4' />
                                             Browse
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/placement/analytics" className='flex items-center gap-2 text-gray-700 hover:text-red-700 transition-colors px-3 py-2 rounded-lg hover:bg-red-50'>
+                                            <BarChart3 className='w-4 h-4' />
+                                            Analytics
                                         </Link>
                                     </li>
                                     <li>
@@ -288,6 +300,10 @@ const Navbar = () => {
                                 <Link to="/faculty/placements" className='flex items-center gap-2 text-gray-700 hover:text-red-700 transition-colors px-3 py-2 rounded-lg hover:bg-red-50'>
                                     <TrendingUp className='w-4 h-4' />
                                     Placements
+                                </Link>
+                                <Link to="/placement/analytics" className='flex items-center gap-2 text-gray-700 hover:text-red-700 transition-colors px-3 py-2 rounded-lg hover:bg-red-50'>
+                                    <BarChart3 className='w-4 h-4' />
+                                    Analytics
                                 </Link>
                                 <Link to="/browse" className='flex items-center gap-2 text-gray-700 hover:text-red-700 transition-colors px-3 py-2 rounded-lg hover:bg-red-50'>
                                     <Search className='w-4 h-4' />

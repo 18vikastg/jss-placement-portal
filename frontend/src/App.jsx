@@ -27,6 +27,7 @@ import PreparationHub from './components/PreparationHub'
 import PreparationHubEnhanced from './components/PreparationHubEnhanced'
 import PreparationDashboard from './components/PreparationDashboard'
 import PlacementDashboard from './components/PlacementDashboard'
+import PlacementAnalyticsDashboard from './components/analytics/PlacementAnalyticsDashboardNew'
 import AIResumeAnalyzer from './components/student/AIResumeAnalyzer'
 
 
@@ -78,6 +79,18 @@ const appRouter = createBrowserRouter([
   },
   {
     path: "/placement/analytics",
+    element: <PlacementAnalyticsDashboard />
+  },
+  {
+    path: "/analytics",
+    element: <PlacementAnalyticsDashboard />
+  },
+  {
+    path: "/placement/dashboard",
+    element: <PlacementAnalyticsDashboard />
+  },
+  {
+    path: "/placement/old-analytics",
     element: <PlacementDashboard />
   },
   // admin ke liye yha se start hoga
